@@ -6,4 +6,9 @@ router.post('/login', loginUser);
 
 router.post('/register', registerUser);
 
+router.post('/logout', (req, res) => {
+  res.clearCookie('jwt');
+  res.status(200).json({ message: 'Logged out successfully' });
+});
+
 export default router;
