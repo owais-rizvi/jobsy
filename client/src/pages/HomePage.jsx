@@ -20,6 +20,7 @@ const HomePage = () => {
         withCredentials: true
       });
       setPosts(response.data);
+      console.log(API_BASE_URL);
     } catch (error) {
       setError("Failed to fetch posts");
       console.error("Error fetching posts:", error);

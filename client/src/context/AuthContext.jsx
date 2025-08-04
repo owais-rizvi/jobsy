@@ -26,6 +26,7 @@ export const AuthProvider = ({ children }) => {
         withCredentials: true
       });
       setUser(response.data);
+      console.log(API_BASE_URL);
     } catch (error) {
       setUser(null);
     } finally {
@@ -40,6 +41,7 @@ export const AuthProvider = ({ children }) => {
         { withCredentials: true }
       );
       setUser(response.data.user);
+      console.log(API_BASE_URL);
       return { success: true };
     } catch (error) {
       return { 
