@@ -77,26 +77,6 @@ npm run dev
 - Frontend: `http://localhost:5173`
 - Backend API: `http://localhost:5000`
 
-## 📁 Project Structure
-
-```
-jobsy/
-├── client/                 # React frontend
-│   ├── src/
-│   │   ├── components/     # Reusable components
-│   │   ├── pages/          # Page components
-│   │   ├── context/        # React context
-│   │   └── App.jsx         # Main app component
-│   └── package.json
-├── server/                 # Express backend
-│   ├── controllers/        # Route handlers
-│   ├── models/             # Database models
-│   ├── routes/             # API routes
-│   ├── middleware/         # Custom middleware
-│   ├── config/             # Database configuration
-│   └── server.js           # Server entry point
-└── README.md
-```
 
 ## 🔗 API Endpoints
 
