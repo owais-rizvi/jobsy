@@ -33,7 +33,6 @@ const RegisterPage = () => {
         } else {
             setError(result.error);
         }
-        
         setLoading(false);
     }
 

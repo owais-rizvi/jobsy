@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import PostCard from "../components/PostCard";
 import { useAuth } from "../context/AuthContext";
 import axios from "axios";
+import API_BASE_URL from '../config/api';
 
 const HomePage = () => {
   const [posts, setPosts] = useState([]);
@@ -15,7 +16,7 @@ const HomePage = () => {
 
   const fetchPosts = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/posts/all", {
+      const response = await axios.get(`${API_BASE_URL}/api/posts/all`, {
         withCredentials: true
       });
       setPosts(response.data);

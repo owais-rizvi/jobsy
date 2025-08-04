@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import PostCard from '../components/PostCard';
 import axios from 'axios';
+import API_BASE_URL from '../config/api';
 
 const ProfilePage = () => {
   const { userId } = useParams();
@@ -17,8 +18,8 @@ const ProfilePage = () => {
   const fetchUserData = async () => {
     try {
       const [userResponse, postsResponse] = await Promise.all([
-        axios.get(`http://localhost:5000/api/users/${userId}`),
-        axios.get(`http://localhost:5000/api/posts/user/${userId}`)
+        axios.get(`${API_BASE_URL}/api/users/${userId}`),
+        axios.get(`${API_BASE_URL}/api/posts/user/${userId}`)
       ]);
       setUser(userResponse.data);
       setPosts(postsResponse.data);

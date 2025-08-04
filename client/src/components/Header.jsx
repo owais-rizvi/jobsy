@@ -10,6 +10,7 @@ import {
   UserIcon,
 } from "@heroicons/react/24/outline";
 import axios from "axios";
+import API_BASE_URL from '../config/api';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,7 +29,7 @@ const Header = () => {
 
     try {
       await axios.post(
-        "http://localhost:5000/api/posts/create",
+        `${API_BASE_URL}/api/posts/create`,
         { content: postText },
         { withCredentials: true }
       );

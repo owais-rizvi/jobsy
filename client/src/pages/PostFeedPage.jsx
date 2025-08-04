@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import PostCard from "../components/PostCard";
 import axios from "axios";
+import API_BASE_URL from '../config/api';
 
 const PostFeedPage = () => {
   const [posts, setPosts] = useState([]);
@@ -13,7 +14,7 @@ const PostFeedPage = () => {
 
   const fetchPosts = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/posts/all", {
+      const response = await axios.get(`${API_BASE_URL}/api/posts/all`, {
         withCredentials: true
       });
       setPosts(response.data);
